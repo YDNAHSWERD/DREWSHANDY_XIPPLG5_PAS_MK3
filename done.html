@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencana Selesai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="coba">
+        <b>SELAMAT SUDAH MEMBUAT PLAN </b>
+    </div>
+    <div>
+    <div class="result-container">
+        <script>
+            // Fungsi untuk mendapatkan parameter dari URL
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            // Mendapatkan nilai parameter dari URL
+            var judul = getParameterByName('judul');
+            var tujuan = getParameterByName('tujuan');
+            var tugas1 = getParameterByName('tugas1');
+            var waktu1 = getParameterByName('waktu1');
+            var tugas2 = getParameterByName('tugas2');
+            var waktu2 = getParameterByName('waktu2');
+            var kebutuhan = getParameterByName('kebutuhan');
+            var waktuMulai = getParameterByName('waktu-mulai');
+            var waktuSelesai = getParameterByName('perkiraan-waktu-selesai');
+            var pencapaian = getParameterByName('pencapaian');
+            var hasil = getParameterByName('hasil');
+            var dampak = getParameterByName('dampak');
+
+            // Menampilkan informasi pada halaman
+            document.write("<p>Makasih! Rencana proyek dengan judul: <strong>" + judul + "</strong> telah berhasil dibuat!.</p>");
+    document.write("<p>Nah, proyek ini tujuannya simpel aja, yaitu: <strong>" + tujuan + "</strong>.</p>");
+    document.write("<p>Ada dua tugas yang harus diselesaikan. Pertama, kita punya tugas: <strong>" + tugas1 + "</strong> yang diperkirakan bakal butuh waktu sekitar: <strong>" + waktu1 + " jam</strong>.</p>");
+    document.write("<p>Lalu, ada tugas kedua, yaitu: <strong>" + tugas2 + "</strong> yang juga diperkirakan bakal memakan waktu sekitar: <strong>" + waktu2 + " jam</strong>.</p>");
+    document.write("<p>Untuk mewujudkan proyek ini, kita butuh beberapa alat dan bahan, seperti: <strong>" + kebutuhan + "</strong>.</p>");
+    document.write("<p>Rencananya, proyek ini akan dimulai pada: <strong>" + waktuMulai + "</strong> dan diperkirakan selesai pada: <strong>" + waktuSelesai + "</strong>.</p>");
+    document.write("<p>Harapannya, dengan proyek ini kita bisa mencapai target: <strong>" + pencapaian + "</strong>.</p>");
+    document.write("<p>Hasil yang diharapkan dari proyek ini adalah: <strong>" + hasil + "</strong>, yang mana diharapkan bisa memberikan dampak positif, seperti: <strong>" + dampak + "</strong>.</p>");
+</script>
+        </script>
+    </div>
+</body>
+</html>

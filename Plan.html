@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencana Proyek</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Rencana Proyek</h1>
+        <form action="done.html" onsubmit="return submitForm()">
+            <label for="judul">Judul Proyek:</label>
+            <input type="text" id="judul" name="judul" required><br>
+
+            <label for="tujuan">Tujuan/Target:</label>
+            <textarea id="tujuan" name="tujuan" required></textarea><br>
+
+            <div class="langkah">
+                <h2>Langkah 1</h2>
+                <label for="tugas1">Tugas:</label>
+                <textarea id="tugas1" name="tugas1" required></textarea><br>
+
+                <label for="waktu1">Waktu (dalam jam):</label>
+                <input type="number" id="waktu1" name="waktu1" min="1" required><br>
+            </div>
+
+            <div class="langkah">
+                <h2>Langkah 2</h2>
+                <label for="tugas2">Tugas:</label>
+                <textarea id="tugas2" name="tugas2" required></textarea><br>
+
+                <label for="waktu2">Waktu (dalam jam):</label>
+                <input type="number" id="waktu2" name="waktu2" min="1" required><br>
+            </div>
+
+            <label for="kebutuhan">Hal yang Diperlukan:</label>
+            <textarea id="kebutuhan" name="kebutuhan" required></textarea><br>
+
+            <label for="waktu-mulai">Waktu Mulai:</label>
+            <input type="datetime-local" id="waktu-mulai" name="waktu-mulai" required><br>
+
+            <div id="live-time"></div>
+
+            <label for="perkiraan-waktu-selesai">Perkiraan Waktu Selesai:</label>
+            <input type="datetime-local" id="perkiraan-waktu-selesai" name="perkiraan-waktu-selesai" required><br>
+
+            <label for="pencapaian">Pencapaian:</label>
+            <input type="text" id="pencapaian" name="pencapaian" required><br>
+
+            <label for="hasil">Hasil:</label>
+            <input type="text" id="hasil" name="hasil" required><br>
+
+            <label for="dampak">Dampak dari Rencana:</label>
+            <textarea id="dampak" name="dampak" required></textarea><br>
+
+            <input type="submit" value="Buat Rencana">
+        </form>
+    </div>
+</body>
+</html>
